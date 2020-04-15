@@ -1,3 +1,6 @@
 node_modules
 dist
 jest.config.js
+jest-integration-config.js
+jest-unit-config.js
+coverage
