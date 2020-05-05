@@ -1,4 +1,4 @@
-import * as express from 'express'
+import express from 'express'
 import setupMiddlewares from './middlewares'
 import setupRoutes from './routes'
 
