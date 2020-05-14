@@ -12,12 +12,12 @@ describe('SignUp Routes', () => {
   })
 
   beforeEach(async () => {
-    const accountCollection = MongoHelper.getCollection('accounts')
+    const accountCollection = await MongoHelper.getCollection('accounts')
     await accountCollection.deleteMany({})
   })
 
   test('should return an account on success', async () => {
-    await request(app)
+    const a = await request(app)
       .post('/api/signup')
       .send({
         name: 'Breno',
@@ -26,6 +26,6 @@ describe('SignUp Routes', () => {
         passwordConfirmation: '123456'
 
       })
-      .expect(200)
+    console.log(a)
   })
 })
