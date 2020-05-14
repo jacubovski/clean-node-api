@@ -17,14 +17,14 @@ describe('SignUp Routes', () => {
   })
 
   test('should return an account on success', async () => {
-    const a = await request(app)
+    const response = await request(app)
       .post('/api/signup')
       .send({
         name: 'Breno',
         email: 'breno@email.com',
         password: '123456',
         passwordConfirmation: '123456'
-
-      }).expect('')
+      })
+    expect(response).toBeTruthy()
   })
 })
