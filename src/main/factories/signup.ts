@@ -7,7 +7,7 @@ import { Controller } from '@/presentation/protocols'
 import { LogControllerDecorator } from '../decorators/log'
 
 export const makeSignUpController = (): Controller => {
-  const salt = 12
+  const salt = 123
   const emailValidatorAdapter = new EmailValidatorAdapter()
   const bcryptAdapter = new BcryptAdapter(salt)
   const accountMongoRepository = new AccountMongoRepository()
